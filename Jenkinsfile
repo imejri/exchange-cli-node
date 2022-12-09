@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        node { label 'nodejs' }
+        docker {image 'node:latest'}
     }
     stages {
         stage('Install Dependencies') {
