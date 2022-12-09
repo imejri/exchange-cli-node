@@ -10,6 +10,7 @@ pipeline {
        }
         stage('Unit Test') {
             steps {
+                input message: 'Execute Unit Test ?', ok: 'Execute', submitter: 'issam'
                 sh 'npm test'
             }
       } 
